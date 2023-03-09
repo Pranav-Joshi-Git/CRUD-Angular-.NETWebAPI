@@ -1,0 +1,61 @@
+<!-- <div class="container my-5">
+    <h1 class="mb-3 text-center text-secondary">List of Employees</h1>
+    <table class="table table-warning table-stripped table-hover">
+
+    </table>
+
+</div> -->
+
+<section class="intro">
+    <div class="bg-image h-100"
+        style="background-image: url(https://mdbootstrap.com/img/Photos/new-templates/glassmorphism-article/img7.jpg);">
+        <div class="mask d-flex align-items-center h-100">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-11">
+                        <div class="card mask-custom">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <h1 class="mb-3 text-center" style="color: whitesmoke;">List of Employees</h1>
+                                    <div class="myclass">
+                                    <a class="btn btn-outline-light "(click)="GoToAddEmployee()">Add Employee</a> 
+                                    </div>
+
+                                    <table class="table table-borderless text-white"
+                                        *ngIf="employees && employees.length>0">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <!-- <th>ID</th> -->
+                                                <th style="color:cyan;">Name</th>
+                                                <th style="color:cyan;">Email</th>
+                                                <th style="color:cyan;">Phone</th>
+                                                <th style="color:cyan;">Salary</th>
+                                                <th style="color:cyan;">Deparment</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let employee of employees" class="text-center">
+                                                <!-- <td>{{employee.id}}</td> -->
+                                                <td>{{employee.name}}</td>
+                                                <td>{{employee.email}}</td>
+                                                <td>{{employee.phone}}</td>
+                                                <td>{{employee.salary}}</td>
+                                                <td>{{employee.department}}</td>
+                                                <td><a [routerLink]="['/employees','edit',employee.id]" class="btn btn-outline-light">View</a></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <p *ngIf="!employees || employees.length <= 0" class="mb-3 text-center"
+                                        style="color: whitesmoke;">No Employees Found</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>

@@ -1,0 +1,45 @@
+<div class="container my-5 ">
+    <h1 class="mb-3 text-center">Edit Employee</h1>
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-4">
+            <form #form="ngForm" (ngSubmit)="updateEmployee()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" readonly
+                    name="id" [(ngModel)]="employeeDetails.id" [ariaRequired]="true">
+                  </div>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name"
+                  name="name" [(ngModel)]="employeeDetails.name" [ariaRequired]="true">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email"
+                    name="email" [(ngModel)]="employeeDetails.email" >
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Phone</label>
+                    <input type="number" class="form-control" id="phone"
+                    name="phone" [(ngModel)]="employeeDetails.phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="salary" class="form-label">Salary</label>
+                    <input type="number" class="form-control" id="salary"
+                    name="salary" [(ngModel)]="employeeDetails.salary" required>
+                </div>
+                <div class="mb-3">
+                    <label for="department" class="form-label">Department</label>
+                    <input type="text" class="form-control" id="department"
+                    name="department" [(ngModel)]="employeeDetails.department" required>
+                </div>
+                <button type="submit" class="btn btn-outline-primary align-center">Update</button>
+                <button type="button" class="btn btn-outline-danger align-center" 
+                (click)="deleteEmployee(employeeDetails.id)">Delete</button>
+            </form>
+
+        </div>
+    </div>
+    
+
+</div>
